@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>range类型的<input>元素实现颜色选择器</title>
+    <script>
+    function $$(id){
+        return document.getElementById(id);
+    }
+    var intR,intB,intB,strColor;
+    function setSpnColor(){
+        intR=$$('txtR').value;
+        intG=$$('txtG').value;
+        intB=$$('txtB').value;
+        strColor='rgb('+intR+','+intG+','+intB+')';
+        $$('pColor').innerHTML=strColor;
+        $$('spnPrev').style.backgroundColor=strColor;
+    }
+    </script>
+    <style>
+        form{ width:350px; }
+        #spnColor{ display: block; float: left; width: 200px; height: 100px;}
+        #spnPrev{  display: block; float: left;width: 100px; height: 100px; background-color: rgb(0,0,0); border: solid 1px #ccc;}
+        p{ clear: both; }
+    </style>
+</head>
+<body>
+    <form id='frmTmp'>
+        <fieldset>
+            <legend>选择颜色值</legend>
+            <span id='spnColor'>
+                <input id='txtR' type='range' value='0' min='0' max='255' onChange='setSpnColor()'>
+                <input id='txtG' type='range' value='0' min='0' max='255' onChange='setSpnColor()'>
+                <input id='txtB' type='range' value='0' min='0' max='255' onChange='setSpnColor()'>
+            </span>
+            <span id='spnPrev'></span>
+            <p id='pColor'>rgb(0,0,0)</p>
+        </fieldset>
+    </form>
+</body>
+</html>

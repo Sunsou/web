@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>hidden属性的使用</title>
+</head>
+<body>
+<script type='text/javascript' aysnc='true'>
+    function Rdo_Click(v){
+        var strAtr=document.getElementById('art');
+        if(v){
+            strAtr.removeAttribute('hidden');
+        }
+        else{
+            strAtr.setAttribute('hidden',true);
+        }
+    }
+</script>
+<input type='radio' onClick='Rdo_Click(1)' name='rdoHidden' value='1' checked='true'/>显示
+<input type='radio' onClick='Rdo_Click(0)' name='rdoHidden' value='0' />隐藏
+<article id='art'>今天是个好天气</article>
+<article hidden='false'>今天是个好天气</article>
+<!--虽然设置了hidden为false，但是仍旧。不显示hidden属性在html5中，只要存在，就是隐藏效果，而不论值为多少要显示元素，要删除hidden属性，而不是设置为false-->
+</body>
+</html>

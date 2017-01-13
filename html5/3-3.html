@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>脚本元素的使用</title>
+    <style type='text/css'>
+        body{ font-size: 12px; }
+        #txtBtn{ border: solid 1px #ccc; background-color: #eee; line-height: 18px; }
+        #txtContent{ border: solid 1px #ccc; line-height: 18px; }
+        #divShow{ border: solid 1px #666; background-color: #eee; margin-top: 5px; padding: 5px; width: 196px; display: none; }
+    </style>
+    <script type='text/javascript' async='true'>
+        function Btn_Click(){
+            var strTxt=document.getElementById("txtContent").value;
+            var strDiv=document.getElementById('divShow');
+            strDiv.style.display='block';
+            strDiv.innerHTML='您输入的字符是：'+strTxt;
+        }
+    </script>
+    <noscript>您的浏览器不支持JavaScript!</noscript>
+</head>
+<body>
+    <input type='text' id='txtContent'>
+    <input type='button' id='txtBtn' onClick='Btn_Click();' value='请点击我'>
+    <div id='divShow'></div>
+</body>
+</html>

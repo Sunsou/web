@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form中checkValidity方法</title>
+    <script>
+        function $$(id){
+            return document.getElementById(id);
+        }
+        function chkPassWord(){
+            var $$Pass=$$('txtPassWord');
+            var $$spnP=$$('spnPassWord');
+            var strP;
+            if($$Pass.checkValidity()){
+                strP='√';
+            }else{
+                strP='×';//无论怎样×不显示
+            }
+            $$spnP.innerHTML=strP;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form onSubmit='return chkPassWord()'>
+        <fieldset>
+            <legend>checkValidity()方法</legend>
+            <p>输入密码：
+            <input id='txtPassWord' type='password' pattern='^[a-zA-Z]\w{5,7}$' required />*
+            <span id='spnPassWord'></span></p>
+            <p><input type='submit' value='确定' /></p>
+            以字母开头，包含字符或字母和下划线，长度在6~8之间
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+	*{ margin:0; padding:0; font-size:16px; }
+    ul,li{ list-style:none;}
+    div{width:186px; margin:20px auto; position:relative; z-index:10000; float:left; }
+    div cite{ width:150px; height:24px; line-height:24px; display:block; color:#807a62; cursor:pointer; font-style:normal; padding-left:4px;  padding-right:30px; border:1px solid #333333;}
+    ul{ width:184px; border:1px solid #333333; background-color:#fff; position:absolute; z-index:20000; margin-top:-1px;display:none;}
+    ul li{height:24px;  line-height:24px;}
+    ul li a{display:block; height:24px; color:#333333; text-decoration:none; padding-left:10px; padding-right:10px;}
+	div a{ color:#807a62; text-decoration:none;}
+	ul li a:hover{ background-color:#ccc}
+	header{ font-size:22px;}
